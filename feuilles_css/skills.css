@@ -1,0 +1,116 @@
+.skills { 
+    align-items: center;
+    height: 100%;
+    padding: 50px 9% 0;
+    color: #000;
+}
+
+/* Styles pour le titre Education */
+.skills-header {
+    color: var(--secondary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 40px 0;
+    text-transform: capitalize;
+    position: relative; 
+}
+.skills-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+.skills-category{
+    flex-basis: 46%;
+}
+.category-title{
+    position: relative;
+    color: var(--secondary-color);
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.category-title::before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 1px; 
+    top: 110%;
+    left: 0;
+    background-color: #AC8C79;
+}
+
+/* Ligne supplémentaire sous le titre */
+.category-title::after {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    top: calc(110% - 1px);
+    left: 0;
+    background-color: #AC8C79;
+}
+
+.skills .skills-list h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px; 
+    color: var(--secondary-color);
+    text-transform: uppercase; /* Mettre en majuscules */
+    margin-bottom: 15px; 
+    font-weight: bold; 
+    position: relative;
+}
+.skill-item .skill-name{
+    font-size: 18px;
+    font-weight: thin;
+    color: #808080;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+.skill-item .progress-bar{
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: #bdbdbd;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.skill-item .progress-bar::after{
+    position: absolute;
+    content: attr(value);
+    top: -35px;
+    right: 0;
+    color: #808080;
+    font-size: 18px;
+}
+.progress-bar .progress-line{
+    position: absolute;
+    width: 0%;
+    height: 7px;
+    background-color: #AC8C79;
+    border-radius: 15px;
+    top: -1px;
+    animation: animate 1.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
+}
+
+@keyframes animate {
+    100%{
+        width: var(--progress-value);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

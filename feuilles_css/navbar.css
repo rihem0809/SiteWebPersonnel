@@ -1,0 +1,159 @@
+/* STYLES GÉNÉRAUX */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* BARRE DE NAVIGATION */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    z-index: 100;
+    top: 0;
+}
+/* Titre de la navbar */
+.navbar .title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#span-title {
+    color: #AC8C79;
+}
+
+/* Liste de navigation */
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 35px;
+    position: relative;
+}
+
+/* Liens de navigation */
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.navbar ul li:hover a {
+    color: #AC8C79;
+}
+
+/* Style de l'élément actif */
+.navbar ul li a.active {
+    color: #AC8C79;
+    text-decoration: underline;
+}
+
+/* Sous-menus déroulants */
+.navbar ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+/* Liens des sous-menus */
+.navbar ul li .dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li .dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+/* Effet au survol des sous-menus */
+.navbar ul li .dropdown-menu li a:hover {
+    color: #f5f5f5;
+    background-color: #AC8C79;
+}
+
+/* Afficher le sous-menu au survol */
+.navbar ul li:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style du bouton lune pour basculer en mode sombre */
+#moon {
+    margin-left: 30px;
+    cursor: pointer;
+    width: 30px;
+    color: var(--secondary-color);
+} 
+
+/* Définition des couleurs principales */
+:root {
+    --primary-color: #f5f5f5; /* Couleur par défaut (clair) */
+    --secondary-color: #212121; /* Couleur du texte ou autre */
+}
+
+#hr1{
+    height:5px;
+    width:100%;
+    background-color:#AC8C79;
+    margin-top: 100px;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    border-top: 1px solid var(--primary-color);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container a {
+    color: var(--secondary-color);
+}
+
+.footer-social a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #AC8C79;
+}

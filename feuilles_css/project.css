@@ -1,0 +1,188 @@
+.projects-section {
+    align-items: center;
+    height: 100%;
+    padding: 50px 9% 0;
+    color: #000;
+}
+
+.projects-title {
+    color: var(--secondary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 40px 0;
+    text-transform: capitalize;
+    position: relative; 
+}
+
+.projects-subtitle{
+    position: relative;
+    color: var(--secondary-color);
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.projects-subtitle::before {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 1px; 
+    top: 110%;
+    left: 0;
+    background-color: #AC8C79;
+}
+
+.projects-subtitle::after {
+    content: '';
+    position: absolute;
+    width: 5%;
+    height: 3px;
+    top: calc(110% - 1px);
+    left: 0;
+    background-color: #AC8C79;
+}
+
+.project-category {
+    margin-bottom: 50px;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #fff;
+    border: 2px solid #AC8C79;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card-content {
+    padding: 20px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #000;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #8a8888;
+    margin-bottom: 10px;
+}
+
+.project-info {
+    font-size: 14px;
+    color: #afadad;
+    margin-bottom: 15px;
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #AC8C79;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.project-btn:hover {
+    background-color: #8a6c61;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Carrousel Container */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+}
+
+.carousel-images img {
+    width: 100%; /* Ajuste la largeur des images à 100% du conteneur */
+    max-width: 1000px; /* Définissez une largeur fixe selon vos besoins */
+    height: 400px; /* Définissez une hauteur fixe */
+    object-fit: cover; /* Assure que les images remplissent leur conteneur tout en conservant leur proportion */
+    display: block;
+    margin: 0 auto; /* Centre les images */
+    border-radius: 10px; /* Ajoute des coins arrondis si nécessaire */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+

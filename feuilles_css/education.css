@@ -1,0 +1,136 @@
+/* Styles pour la section principale Education */
+.education { 
+    align-items: center;
+    height: 100%;
+    padding: 60px 9% 0;
+    color: #000;
+}
+
+/* Styles pour le titre Education */
+.education-title {
+    color: var(--secondary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 40px 0;
+    text-transform: capitalize;
+    position: relative; 
+}
+
+/* Conteneur pour la liste des éléments Education */
+.education-list {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Ligne verticale entre les éléments Education */
+.education-list::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #AC8C79;
+    left: calc(50% - 1px);
+}
+
+/* Styles pour chaque élément Education */
+.education-item {
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+}
+
+/* Styles pour les éléments Education impairs */
+.education-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+/* Styles pour les éléments Education pairs */
+.education-item:nth-child(even) {
+    padding-left: calc(50% + 30px);
+}
+
+/* Styles pour les points dans la liste Education */
+.education-dot {
+    height: 21px;
+    width: 21px;
+    background-color: #AC8C79;
+    
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+/* Styles pour la date des éléments Education */
+.education-date {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin: 6px 0 15px;
+}
+
+/* Conteneur pour le contenu des éléments Education */
+.education-content {
+    background-color: transparent;
+    border: 3px solid #AC8C79;
+    padding: 30px 50px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #AC8C79;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+/* Effet au survol des éléments Education */
+.education-content:hover {
+    transform: scale(1.05); /* Augmentation de la taille */
+    box-shadow: 0 0 20px #AC8C79;
+}
+
+/* Styles pour le titre à l'intérieur du contenu */
+.education-content h3 {
+    font-size: 20px;
+    color: var(--secondary-color);
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+
+/* Styles pour le texte à l'intérieur du contenu */
+.education-content p {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+.education-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du cercle noir contenant le texte */
+.badge {
+	align-items: center;
+	gap: 8px;
+	margin-top: 6px;
+	font-size: 12px;
+	font-weight: 500;
+	background-color: #AC8C79;
+	border-radius: 30px;
+	display: inline-block;
+	padding: 1px 8px;
+}
+.badge a{
+	color: white;
+}
+
+
+
+

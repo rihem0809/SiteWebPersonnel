@@ -1,0 +1,131 @@
+.passions-section{
+    align-items: center;
+    height: 100%;
+    padding: 60px 9% 0;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+/* Titres de sections */
+.section-title {
+    color: var(--secondary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 40px 0;
+    text-transform: capitalize;
+    position: relative; 
+    
+}
+
+
+.passions-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.passion-item {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.passion-item:hover {
+    transform: scale(1.05);
+}
+
+.passion-image {
+    width: 500px; /* Fixer une taille uniforme */
+    height: 250px; /* Fixer une taille uniforme */
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.passion-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.passion-info h3 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.passion-info p {
+    color: #777;
+    font-size: 1em;
+}
+
+/* Section Qualités */
+
+.qualities-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.quality-item {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.quality-item:hover {
+    transform: scale(1.05);
+}
+
+.quality-icon {
+    font-size: 3em;
+    color: #555;
+    margin-right: 20px;
+}
+
+.quality-info h3 {
+    color: #333;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.quality-info p {
+    color: #777;
+    font-size: 1em;
+}
+
+/* Vidéo section */
+
+
+/* Titres de sections */
+h3 {
+    color: var(--secondary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 40px 0;
+    text-transform: capitalize;
+    position: relative; 
+    
+}
+.video-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+video {
+   width: 15%;  /* Réduit la largeur maximale à 70% de l'espace disponible */
+    height: 350px;    /* Conserve le ratio d'aspect */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadonnées -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+
+    <!-- Liens vers les feuilles de style -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../feuilles_css/navbar.css">
+    <link rel="stylesheet" href="../feuilles_css/skills.css">
+</head>
+
+<body>
+    <!-- Section Navigation -->
+    <nav class="navbar">
+        <a class="title">Rihem <span id="span-title">Naifar</span></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- Menu déroulant pour "Education" -->
+            <li class="dropdown">
+                <a class="active"> Education</a>
+                <ul class="dropdown-menu">
+                    <li><a href="education.html">Academic Background</a></li>
+                    <li><a href="skills.html">IT Skills</a></li>
+                </ul>
+            </li>
+            <li><a href="project.html">Projects</a></li>
+            <!-- Menu déroulant pour "Extras" -->
+            <li class="dropdown">
+                <a> Extras</a>
+                <ul class="dropdown-menu">
+                    <li><a href="hobbies.html">Hobbies and Personality</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Icône pour le mode sombre -->
+            <i id="moon" class="bx bxs-moon"></i>
+        </ul>
+    </nav>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <h2 class="skills-header">Skills</h2>
+
+        <!-- First Section: Web & Mobile Development -->
+        <div class="skills-wrapper">
+            <div class="skills-category">
+                <h3 class="category-title">Web & Mobile Development</h3>
+                <div class="skills-list">
+                    <!-- Web Skills -->
+                    <h4>Web:</h4>
+                    <div class="skill-item">
+                        <div class="skill-name">HTML and CSS</div>
+                        <div class="progress-bar" value="90%">
+                            <div class="progress-line" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="progress-bar" value="60%">
+                            <div class="progress-line" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">PHP and Laravel</div>
+                        <div class="progress-bar" value="75%">
+                            <div class="progress-line" style="width: 75%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Skills -->
+                    <h4>Mobile:</h4>
+                    <div class="skill-item">
+                        <div class="skill-name" >Android</div>
+                        <div class="progress-bar" value="50%">
+                            <div class="progress-line" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name" >Flutter</div>
+                        <div class="progress-bar"  value="85%">
+                            <div class="progress-line" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Section: Tools and Technologies -->
+            <div class="skills-category">
+                <h3 class="category-title">Tools and Technologies</h3>
+                <div class="skills-list">
+                    <!-- Programming Languages -->
+                    <h4>Programming Languages:</h4>
+                    <div class="skill-item">
+                        <div class="skill-name">Python</div>
+                        <div class="progress-bar"  value="80%">
+                            <div class="progress-line" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">C</div>
+                        <div class="progress-bar" value="65%">
+                            <div class="progress-line" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Java</div>
+                        <div class="progress-bar" value="40%">
+                            <div class="progress-line" style="width: 40%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <h4>Databases:</h4>
+                    <div class="skill-item">
+                        <div class="skill-name">MySQL</div>
+                        <div class="progress-bar" value="47%">
+                            <div class="progress-line" style="width: 47%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr id="hr1"/>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Rihem Naifar. All rights reserved.</p>
+            <p>Contact: <a href="mailto:rihem.naifar@gmail.com">rihem.naifar@gmail.com</a></p>
+
+            <!-- Liens des réseaux sociaux dans le footer -->
+            <div class="footer-social">
+                <a href="https://github.com/rihem0809" target="_blank"><i class="bx bxl-github"></i></a>
+                <a href="https://www.linkedin.com/in/naifar-rihem-9b9538296/?locale=fr_FR" target="_blank"><i
+                        class="bx bxl-linkedin"></i></a>
+                <a href="mailto:rihem.naifar@gmail.com"><i class="bx bxl-gmail"></i></a>
+                <a href="https://www.facebook.com/share/1CK6GcyjWF/?mibextid=wwXIfr" target="_blank"><i
+                        class="bx bxl-facebook-circle"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script pour basculer en mode sombre -->
+    <script>
+        const moonIcon = document.getElementById('moon');
+        const root = document.documentElement;
+
+        // Fonction pour appliquer le mode clair
+        const setLightMode = () => {
+            root.style.setProperty('--primary-color', '#f5f5f5');
+            root.style.setProperty('--secondary-color', '#212121');
+            moonIcon.classList.remove('bx-moon');
+            moonIcon.classList.add('bxs-moon');
+            localStorage.setItem('theme', 'light'); // Sauvegarde l'état du mode clair
+        };
+
+        // Fonction pour appliquer le mode sombre
+        const setDarkMode = () => {
+            root.style.setProperty('--primary-color', '#212121');
+            root.style.setProperty('--secondary-color', '#f5f5f5');
+            moonIcon.classList.remove('bxs-moon'); // Icône "pleine"
+            moonIcon.classList.add('bx-moon'); // Icône "vide"
+            localStorage.setItem('theme', 'dark'); // Sauvegarde l'état du mode sombre
+        };
+
+        // Vérifie l'état du mode dans le localStorage lors du chargement de la page
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            setDarkMode();
+        } else {
+            setLightMode();
+        }
+
+        // Écoute l'événement de clic sur l'icône pour changer le mode
+        moonIcon.addEventListener('click', () => {
+            const currentPrimaryColor = getComputedStyle(root).getPropertyValue('--primary-color').trim();
+            if (currentPrimaryColor === '#f5f5f5') {
+                setDarkMode();
+            } else {
+                setLightMode();
+            }
+        });
+
+        setLightMode();
+
+        // Get all the progress bars
+        const progressBars = document.querySelectorAll('.progress-bar');
+
+        // Iterate over each progress bar and set the width based on the 'value' attribute
+        progressBars.forEach(bar => {
+            const progressValue = bar.getAttribute('value');  // Get the value (e.g., 85%)
+            const progressLine = bar.querySelector('.progress-line');
+            progressLine.style.setProperty('--progress-value', progressValue);
+        });
+
+    </script>
+</body>
+
+</html>

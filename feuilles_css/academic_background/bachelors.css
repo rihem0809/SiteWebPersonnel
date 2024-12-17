@@ -1,0 +1,136 @@
+/* Section Details */
+.education-details {
+    margin: 100px 30px 30px 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-details h1 {
+    
+    color: #AC8C79;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Ajout d'un soulignement au titre */
+.education-details h1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 110%;
+    left: 0;
+    background-color: #AC8C79;
+}
+
+/* Ligne supplémentaire sous le titre */
+.education-details h1::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    top: calc(110% - 1px);
+    left: 0;
+    background-color: #AC8C79;
+}
+
+.diploma-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-details p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Diplôme Image */
+.diploma-image {
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-details h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    color: #212121;
+}
+
+/* Style des tableaux */
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 2px solid #ddd;
+}
+
+th {
+    background-color: #AC8C79;
+    color: #fff;
+    font-size: 18px;
+}
+
+td {
+    font-size: 16px;
+}
+
+/* Style des liens et boutons dans les tableaux */
+table a {
+    color: #AC8C79;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+table a:hover {
+    color: #212121; /* Couleur sombre au survol */
+}
+
+.skills {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.skills li {
+    margin-top: 20px;
+}
+
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 768px) {
+    .about_container .about_content {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+
+    .personal_info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Définition des couleurs principales */
+:root {
+    --primary-color: #f5f5f5; /* Couleur par défaut (clair) */
+    --secondary-color: #212121; /* Couleur du texte ou autre */
+}
+
+
+
+

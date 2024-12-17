@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadonnées -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passions & Personality</title>
+
+    <!-- Liens CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../feuilles_css/navbar.css">
+    <link rel="stylesheet" href="../feuilles_css/hobbies.css">
+
+</head>
+
+<body>
+    <!-- Section Navigation -->
+    <nav class="navbar">
+        <a class="title">Rihem <span id="span-title">Naifar</span></a>
+        <ul>
+            <li><a href="index.html" >Home</a></li>
+            <!-- Menu déroulant pour "Education" -->
+            <li class="dropdown">
+                <a> Education</a>
+                <ul class="dropdown-menu">
+                    <li><a href="education.html">Academic Background</a></li>
+                    <li><a href="skills.html">IT Skills</a></li>
+                </ul>
+            </li>
+            <li><a href="project.html">Projects</a></li>
+            <!-- Menu déroulant pour "Extras" -->
+            <li class="dropdown">
+                <a class="active"> Extras</a>
+                <ul class="dropdown-menu">
+                    <li><a href="hobbies.html">Hobbies and Personality</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Icône pour le mode sombre -->
+            <i id="moon" class="bx bxs-moon"></i>
+        </ul>
+    </nav>
+
+
+    <!-- Section Passions -->
+    <section class="passions-section">
+        <h2 class="section-title">My Passions</h2>
+        <div class="passions-wrapper">
+            <div class="passion-item">
+                <img src="../multimedia/drawing.jpeg" alt="Drawing" class="passion-image">
+                <div class="passion-info">
+                    <h3>Drawing</h3>
+                    <p>Drawing is a form of expression that allows me to bring my imagination to life. It gives me a
+                        sense of peace and fulfillment.</p>
+                </div>
+            </div>
+
+            <div class="passion-item">
+                <img src="../multimedia/traveling.jpeg" alt="Traveling" class="passion-image">
+                <div class="passion-info">
+                    <h3>Traveling</h3>
+                    <p>Traveling allows me to explore new places, cultures, and experiences. It broadens my horizons and
+                        gives me the opportunity to learn and grow in different environments.</p>
+                </div>
+            </div>
+
+            <div class="passion-item">
+                <img src="../multimedia/singing.jpeg" alt="Listening to Music and Singing" class="passion-image">
+                <div class="passion-info">
+                    <h3>Listening to Music and Singing</h3>
+                    <p>Listening to music and singing are ways for me to connect with my emotions and express myself.
+                        Music provides me with relaxation, and singing allows me to be creative and joyful.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ajout de la vidéo -->
+        <div class="video-section">
+            <h3>Watch My Hobbies in Action</h3>
+            <video controls>
+                <source src="../multimedia/singing1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+
+    <!-- Section Personnalité -->
+    <section class="personality-section">
+        <h2 class="section-title">My Qualities</h2>
+        <div class="qualities-wrapper">
+            <div class="quality-item">
+                <i class="bx bx-brain quality-icon"></i>
+                <div class="quality-info">
+                    <h3>Creative</h3>
+                    <p>Creativity flows through everything I do, whether in my professional work or personal projects.
+                    </p>
+                </div>
+            </div>
+
+            <div class="quality-item">
+                <i class="bx bx-heart quality-icon"></i>
+                <div class="quality-info">
+                    <h3>Empathetic</h3>
+                    <p>Empathy drives me to understand and help others, ensuring a meaningful connection with those
+                        around me.</p>
+                </div>
+            </div>
+
+            <div class="quality-item">
+                <i class="bx bx-target-lock quality-icon"></i>
+                <div class="quality-info">
+                    <h3>Determined</h3>
+                    <p>I am highly focused on achieving my goals, no matter how challenging they may be. I am persistent
+                        and resilient.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr id="hr1"/>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Rihem Naifar. All rights reserved.</p>
+            <p>Contact: <a href="mailto:rihem.naifar@gmail.com">rihem.naifar@gmail.com</a></p>
+
+            <!-- Liens des réseaux sociaux dans le footer -->
+            <div class="footer-social">
+                <a href="https://github.com/rihem0809" target="_blank"><i class="bx bxl-github"></i></a>
+                <a href="https://www.linkedin.com/in/naifar-rihem-9b9538296/?locale=fr_FR" target="_blank"><i
+                        class="bx bxl-linkedin"></i></a>
+                <a href="mailto:rihem.naifar@gmail.com"><i class="bx bxl-gmail"></i></a>
+                <a href="https://www.facebook.com/share/1CK6GcyjWF/?mibextid=wwXIfr" target="_blank"><i
+                        class="bx bxl-facebook-circle"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script pour basculer en mode sombre -->
+    <script>
+        const moonIcon = document.getElementById('moon');
+        const root = document.documentElement;
+
+        // Fonction pour appliquer le mode clair
+        const setLightMode = () => {
+            root.style.setProperty('--primary-color', '#f5f5f5');
+            root.style.setProperty('--secondary-color', '#212121');
+            moonIcon.classList.remove('bx-moon');
+            moonIcon.classList.add('bxs-moon');
+            localStorage.setItem('theme', 'light'); // Sauvegarde l'état du mode clair
+        };
+
+        // Fonction pour appliquer le mode sombre
+        const setDarkMode = () => {
+            root.style.setProperty('--primary-color', '#212121');
+            root.style.setProperty('--secondary-color', '#f5f5f5');
+            moonIcon.classList.remove('bxs-moon'); // Icône "pleine"
+            moonIcon.classList.add('bx-moon'); // Icône "vide"
+            localStorage.setItem('theme', 'dark'); // Sauvegarde l'état du mode sombre
+        };
+
+        // Vérifie l'état du mode dans le localStorage lors du chargement de la page
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            setDarkMode();
+        } else {
+            setLightMode();
+        }
+
+        // Écoute l'événement de clic sur l'icône pour changer le mode
+        moonIcon.addEventListener('click', () => {
+            const currentPrimaryColor = getComputedStyle(root).getPropertyValue('--primary-color').trim();
+            if (currentPrimaryColor === '#f5f5f5') {
+                setDarkMode();
+            } else {
+                setLightMode();
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

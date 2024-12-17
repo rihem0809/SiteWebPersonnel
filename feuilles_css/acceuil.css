@@ -1,0 +1,158 @@
+/* SECTION D'ACCUEIL */
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: var(--secondary-color);
+    justify-content: space-between;
+}
+
+/* Informations de la section d'accueil */
+.home-info h2 {
+    font-size: 20px;
+}
+
+.home-info h1{
+    color: var(--secondary-color);
+}
+
+
+.home-info h1 span{
+    font-size: 55px;
+    color: #AC8C79; /* Couleur pour le texte du titre */
+}
+
+.home-info h4 {
+    font-size: 20px;
+    margin-bottom:10px;
+}
+
+.home-info p {
+    font-size: 16px;
+    margin: 1px 0 30px;
+}
+
+/* Style des boutons sociaux */
+.home-info .btn-social {
+    display: flex;
+    align-items: center;
+}
+
+/* Style des boutons */
+.home-info .btn-social .btn {
+    display: inline-block; 
+    padding: 10px 30px;
+    background: #AC8C79;
+    border: 1px solid #AC8C79;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #f5f5f5;
+    font-weight: 600;
+    transition: .5s; 
+}
+
+/* Style des icônes dans les boutons */
+.home-info .btn-social .btn i {
+    font-size: 20px; 
+    margin-left: 10px; 
+    vertical-align: middle;
+}
+
+/* Effet de survol des boutons */
+.home-info .btn-social .btn:hover {
+    background-color: transparent; 
+    color: #AC8C79; 
+}
+
+/* Style de la section des réseaux sociaux */
+.social-media {
+    padding-top: 30px;
+    display: flex;
+    align-items: center; /* Centrer verticalement la phrase et les liens */
+}
+
+/* Style du texte dans les réseaux sociaux */
+.social-media p {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Style des liens de réseaux sociaux */
+.home-info .social-media a {
+    justify-content: space-between;
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #AC8C79;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #AC8C79;
+    margin: 0 8px;
+    transition: .5s;
+}
+
+/* Effet de survol des liens sociaux */
+.home-info .social-media a:hover {
+    background-color: #AC8C79; 
+    color: #ffffff; 
+}
+
+/* Style pour l'image circulaire */
+.home-img .img-box {
+    position: relative;
+    width:28vw;
+    height: 28vw;
+    border-radius: 50%; /* Rendre l'image circulaire */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Masquer les débordements */
+}
+
+/* Ajouter un effet de bordure circulaire avec un dégradé */
+.home-img .img-box::before,
+.home-img .img-box::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: conic-gradient(transparent, transparent, #AC8C79, #AC8C79);
+}
+
+/* Contenu de l'image dans la boîte circulaire */
+.home-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden; /* Masquer l'excédent */
+}
+
+/* Style de l'image à l'intérieur de la boîte circulaire */
+.home-img .img-box .img-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+    border-radius: 70%; 
+    overflow: hidden; 
+}
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 768px) {
+    .about_container .about_content {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+
+    .personal_info {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+

@@ -1,0 +1,156 @@
+/* SECTION À PROPOS */
+.about_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    justify-content: space-between;
+}
+
+/* Contenu principal de la section "À propos" */
+.about_container .about_content {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-gap: 70px;
+}
+
+/* Image de la section "À propos" */
+.about_content .AboutImage {
+    position: relative;
+    min-width: 300px;
+    height: 380px;
+}
+
+/* Style pour l'image */
+.AboutImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    position: relative;
+    z-index: 1;
+}
+
+/* Contour autour de l'image */
+.about_content .AboutImage::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    outline: 3px solid #AC8C79;
+    left: 0;
+    z-index: 2;
+}
+
+/* Style du titre principal */
+.AboutInfo h1 {
+    color: #AC8C79;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+/* Ajout d'un soulignement au titre */
+.AboutInfo h1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 110%;
+    left: 0;
+    background-color: #AC8C79;
+}
+
+/* Ligne supplémentaire sous le titre */
+.AboutInfo h1::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    top: calc(110% - 1px);
+    left: 0;
+    background-color: #AC8C79;
+}
+
+/* Style des sous-titres */
+.AboutInfo h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    padding: 14px 0px 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Style du texte général */
+.AboutInfo p {
+    color: var(--secondary-color);
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+/* Section des informations personnelles */
+.personal_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 20px;
+    margin-top: 14px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #AC8C79;
+}
+
+/* Style des informations personnelles */
+.personal_info div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--secondary-color);
+}
+
+/* Style des étiquettes dans les informations personnelles */
+.personal_info div strong {
+    color: #AC8C79;
+}
+
+/* Style du bouton dans la section "À propos" */
+.AboutInfo button {
+    margin-top: 20px;
+    background: transparent;
+    border: 1px solid #AC8C79;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #AC8C79;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 600;
+    padding: 10px 30px;
+}
+
+/* Effet au survol du bouton */
+.AboutInfo button:hover {
+    background-color: #AC8C79;
+    color: white;
+}
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 768px) {
+    .about_container .about_content {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+
+    .personal_info {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+

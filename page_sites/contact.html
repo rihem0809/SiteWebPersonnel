@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadonnées -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title> <!-- Correction du titre en retirant un ">" -->
+
+    <!-- Liens vers les feuilles de style et les bibliothèques -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../feuilles_css/navbar.css">
+    <link rel="stylesheet" href="../feuilles_css/contact.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Section Navigation -->
+    <nav class="navbar">
+        <a class="title">Rihem <span id="span-title">Naifar</span></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- Menu déroulant pour "Education" -->
+            <li class="dropdown">
+                <a> Education</a>
+                <ul class="dropdown-menu">
+                    <li><a href="education.html">Academic Background</a></li>
+                    <li><a href="skills.html">IT Skills</a></li>
+                </ul>
+            </li>
+            <li><a href="project.html">Projects</a></li>
+            <!-- Menu déroulant pour "Extras" -->
+            <li class="dropdown">
+                <a> Extras</a>
+                <ul class="dropdown-menu">
+                    <li><a href="hobbies.html">Hobbies and Personality</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <!-- Icône pour le mode sombre -->
+            <i id="moon" class="bx bxs-moon"></i>
+        </ul>
+    </nav>
+
+    <!-- Conteneur principal -->
+    <div class="container">
+        <div class="form">
+            <div class="contact-info">
+                <h3 class="title">Let's get in touch</h3>
+                <p class="text">
+                    Have a question, a project, or an idea? I'd love to hear from you. Send me a message!
+                </p>
+
+                <!-- Section Informations -->
+                <div class="info">
+                    <div class="information">
+                        <i class='bx bxs-home'></i>
+                        <p>Route Manzel Cheker Km6</p>
+                    </div>
+                    <div class="information">
+                        <i class='bx bxs-envelope'></i>
+                        <p>rihem.naifar@gmail.com</p>
+                    </div>
+                    <div class="information">
+                        <i class='bx bxs-phone'></i>
+                        <p>+216 22808931</p>
+                    </div>
+                </div>
+
+                <!-- Section des réseaux sociaux -->
+                <div class="social-media">
+                    <p>Connect with us :</p>
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxl-instagram-alt'></i>
+                        </a>
+                        <a href="#">
+                            <i class="bx bxl-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulaire de contact -->
+            <div class="contact-form">
+                <form action="index.html" autocomplete="off">
+                    <h3 class="title">Contact us</h3>
+
+                    <div class="input-container">
+                        <input type="text" name="name" class="input" required />
+                        <label>Username</label>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="mail" name="email" class="input" required />
+                        <label>Email</label>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="phone" name="tel" class="input"  required />
+                        <label>Phone</label>
+                    </div>
+
+                    <div class="input-container textarea">
+                        <textarea name="message" class="input" rows="5" required></textarea>
+                        <label>Message</label>
+                    </div>
+
+                    <input type="submit" value="Send" class="btn" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <hr id="hr1" />
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Rihem Naifar. All rights reserved.</p>
+            <p>Contact: <a href="mailto:rihem.naifar@gmail.com">rihem.naifar@gmail.com</a></p>
+
+            <!-- Liens des réseaux sociaux dans le footer -->
+            <div class="footer-social">
+                <a href="https://github.com/rihem0809" target="_blank"><i class="bx bxl-github"></i></a>
+                <a href="https://www.linkedin.com/in/naifar-rihem-9b9538296/?locale=fr_FR" target="_blank"><i
+                        class="bx bxl-linkedin"></i></a>
+                <a href="mailto:rihem.naifar@gmail.com"><i class="bx bxl-gmail"></i></a>
+                <a href="https://www.facebook.com/share/1CK6GcyjWF/?mibextid=wwXIfr" target="_blank"><i
+                        class="bx bxl-facebook-circle"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script pour basculer en mode sombre -->
+    <script>
+        const moonIcon = document.getElementById('moon');
+        const root = document.documentElement;
+
+        // Fonction pour appliquer le mode clair
+        const setLightMode = () => {
+            root.style.setProperty('--primary-color', '#f5f5f5');
+            root.style.setProperty('--secondary-color', '#212121');
+            moonIcon.classList.remove('bx-moon');
+            moonIcon.classList.add('bxs-moon');
+            localStorage.setItem('theme', 'light'); // Sauvegarde l'état du mode clair
+        };
+
+        // Fonction pour appliquer le mode sombre
+        const setDarkMode = () => {
+            root.style.setProperty('--primary-color', '#212121');
+            root.style.setProperty('--secondary-color', '#f5f5f5');
+            moonIcon.classList.remove('bxs-moon'); // Icône "pleine"
+            moonIcon.classList.add('bx-moon'); // Icône "vide"
+            localStorage.setItem('theme', 'dark'); // Sauvegarde l'état du mode sombre
+        };
+
+        // Vérifie l'état du mode dans le localStorage lors du chargement de la page
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            setDarkMode();
+        } else {
+            setLightMode();
+        }
+
+        // Écoute l'événement de clic sur l'icône pour changer le mode
+        moonIcon.addEventListener('click', () => {
+            const currentPrimaryColor = getComputedStyle(root).getPropertyValue('--primary-color').trim();
+            if (currentPrimaryColor === '#f5f5f5') {
+                setDarkMode();
+            } else {
+                setLightMode();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

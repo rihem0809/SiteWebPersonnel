@@ -1,0 +1,276 @@
+/* Conteneur principal : centrer les éléments et occuper toute la hauteur de l'écran */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+
+    background-color: var(--primary-color);
+    box-sizing: border-box;
+}
+
+/* Formulaire principal : deux colonnes avec des bordures arrondies */
+.form {
+    max-width: 860px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 1px #AC8C79;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 430px;
+}
+
+
+
+/* Section du formulaire de contact */
+.contact-form {
+    background-color: #AC8C79;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Décoration visuelle avant le formulaire */
+.contact-form:before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: #AC8C79;
+    transform: rotate(45deg);
+    top: 50px;
+    left: -13px;
+}
+
+/* Contenu interne du formulaire */
+form {
+    padding: 25px 30px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Informations de contact */
+.contact-info {
+    padding: 50px 25px;
+    position: relative;
+}
+
+/* Titre des informations de contact */
+.contact-info .title {
+    color: #AC8C79;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Texte descriptif des informations */
+.contact-info .text {
+    font-size: 15px;
+    color: black;
+    margin: 25px 0px;
+}
+
+/* Détails des informations individuelles */
+.information {
+    display: flex;
+    align-items: center;
+    color: black;
+    margin: 25px 0px;
+    font-size: 15px;
+}
+
+/* Icônes associées aux informations */
+.information i {
+    margin-right: 10px;
+}
+
+/* Section des réseaux sociaux */
+.social-media {
+    padding-top: 10px;
+}
+
+/* Texte associé aux réseaux sociaux */
+.social-media p {
+    font-size: 15px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Icônes des réseaux sociaux */
+.social-icons {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: linear-gradient(50deg, #AC8C79, #AC8C79);
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.05);
+}
+
+.contact-form .title {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* Style du conteneur du champ */
+.input-container {
+    position: relative;
+    margin: 25px 0px;
+}
+
+/* Style des champs */
+.input {
+    width: 100%;
+    outline: none;
+    border: 2px solid white;
+    background: none;
+    padding: 5px 12px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+/* Style du label */
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    padding: 0 0.4rem;
+    color: #fafafa;
+    font-size: 0.9rem;
+    font-weight: 400;
+    pointer-events: none;
+    z-index: 1000;
+    transition: 0.5s;
+    opacity: 1; /* Initialement visible */
+}
+
+/* Lorsque l'input est focalisé, déplacer le label */
+.input-container.focus label {
+    top: -20px; /* Déplace le label vers le haut */
+    transform: translateY(0); /* Annule le translateY */
+    font-size: 0.8rem; /* Réduit la taille du label */
+    opacity: 0; /* Cache complètement le label */
+}
+
+/* Lorsque l'input contient du texte, cache le label (validité) */
+.input-container input:valid + label,
+.input-container textarea:valid + label {
+    top: -20px; /* Déplace vers le haut */
+    transform: translateY(0);
+    font-size: 0.8rem;
+    opacity: 0; /* Cache le label */
+}
+
+/* Si l'input est focalisé et que l'utilisateur a tapé, applique la classe focus */
+.input-container input:focus + label,
+.input-container textarea:focus + label {
+    opacity: 0; /* Cache complètement le label */
+}
+
+
+
+/* Bouton d'envoi du formulaire */
+.btn {
+    padding: 6px 13px;
+    background-color: #fff;
+    color: #AC8C79;
+    border: 2px solid #fafafa;
+    font-size: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Effet au survol du bouton */
+.btn:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+/* Responsiveness : passage à une colonne sur les petits écrans */
+@media (max-width: 768px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+    .contact-info,
+    .contact-form {
+        padding: 10px;
+    }
+    .contact-info .title {
+        font-size: 18px;
+    }
+    .contact-info .text {
+        font-size: 14px;
+    }
+    .contact-info .information {
+        font-size: 14px;
+    }
+    .contact-form .title {
+        font-size: 18px;
+    }
+    .input-container label {
+        font-size: 0.8rem;
+    }
+    .input {
+        font-size: 14px;
+    }
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Responsiveness : pour les très petits écrans (par exemple, en dessous de 480px) */
+@media (max-width: 480px) {
+    .container {
+        height: 100%;
+        padding: 15px;
+    }
+    .form {
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+    .contact-info,
+    .contact-form {
+        padding: 10px;
+    }
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .input-container {
+        margin: 15px 0;
+    }
+    .input {
+        font-size: 13px;
+        padding: 8px;
+    }
+    .btn {
+        padding: 10px 15px;
+    }
+}

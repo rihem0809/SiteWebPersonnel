@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadonnées -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+
+    <!-- Liens vers les feuilles de style -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../feuilles_css/navbar.css">
+    <link rel="stylesheet" href="../feuilles_css/quiz.css">
+</head>
+
+<body>
+    <!-- Section Navigation -->
+    <nav class="navbar">
+        <a class="title">Rihem <span id="span-title">Naifar</span></a>
+        <ul>
+            <li><a href="index.html" >Home</a></li>
+            <!-- Menu déroulant pour "Education" -->
+            <li class="dropdown">
+                <a> Education</a>
+                <ul class="dropdown-menu">
+                    <li><a href="education.html">Academic Background</a></li>
+                    <li><a href="skills.html">IT Skills</a></li>
+                </ul>
+            </li>
+            <li><a href="project.html">Projects</a></li>
+            <!-- Menu déroulant pour "Extras" -->
+            <li class="dropdown">
+                <a class="active"> Extras</a>
+                <ul class="dropdown-menu">
+                    <li><a href="hobbies.html">Hobbies and Personality</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Icône pour le mode sombre -->
+            <i id="moon" class="bx bxs-moon"></i>
+        </ul>
+    </nav>
+    
+    <section class="quiz-section">
+        <h2 class="quiz-title"> Quiz</h2>
+
+        <div id="quiz-container">
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">1 / 15</span>What does the "CSS" acronym stand for?</p>
+                <div class="options">
+                    <label><input type="radio" name="question1" value="Cascading Style Sheets"> Cascading Style
+                        Sheets</label>
+                    <label><input type="radio" name="question1" value="Creative Style Sheets"> Creative Style
+                        Sheets</label>
+                    <label><input type="radio" name="question1" value="Computer Style Sheets"> Computer Style
+                        Sheets</label>
+                    <label><input type="radio" name="question1" value="Colorful Style Sheets"> Colorful Style
+                        Sheets</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">2 / 15</span>Which of the following is used to define a
+                    function in JavaScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="question2" value="function"> function</label>
+                    <label><input type="radio" name="question2" value="func"> func</label>
+                    <label><input type="radio" name="question2" value="def"> def</label>
+                    <label><input type="radio" name="question2" value="fn"> fn</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">3 / 15</span>What does HTML stand for?</p>
+                <div class="options">
+                    <label><input type="radio" name="question3" value="A programming language"> A programming
+                        language</label>
+                    <label><input type="radio" name="question3" value="A markup language"> A markup language</label>
+                    <label><input type="radio" name="question3" value="A framework"> A framework</label>
+                    <label><input type="radio" name="question3" value="A design tool"> A design tool</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">4 / 15</span>Which HTML tag is used to insert an image?</p>
+                <div class="options">
+                    <label><input type="radio" name="question4" value="image"> &lt;image&gt;</label>
+                    <label><input type="radio" name="question4" value="img"> &lt;img&gt;</label>
+                    <label><input type="radio" name="question4" value="picture"> &lt;picture&gt;</label>
+                    <label><input type="radio" name="question4" value="src"> &lt;src&gt;</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">5 / 15</span>What does the "PHP" acronym stand for?</p>
+                <div class="options">
+                    <label><input type="radio" name="question5" value="Personal Home Page"> Personal Home Page</label>
+                    <label><input type="radio" name="question5" value="PHP: Hypertext Preprocessor"> PHP: Hypertext
+                        Preprocessor</label>
+                    <label><input type="radio" name="question5" value="Programming Home Page"> Programming Home
+                        Page</label>
+                    <label><input type="radio" name="question5" value="Predefined Hypertext Page"> Predefined Hypertext
+                        Page</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">6 / 15</span>What is the main purpose of JavaScript in a
+                    webpage?</p>
+                <div class="options">
+                    <label><input type="radio" name="question6" value="Style the page"> Style the page</label>
+                    <label><input type="radio" name="question6" value="Add interactivity"> Add interactivity</label>
+                    <label><input type="radio" name="question6" value="Structure the page"> Structure the page</label>
+                    <label><input type="radio" name="question6" value="Manage databases"> Manage databases</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">7 / 15</span>In which file are styles for a webpage
+                    defined?</p>
+                <div class="options">
+                    <label><input type="radio" name="question7" value=".html"> .html</label>
+                    <label><input type="radio" name="question7" value=".css"> .css</label>
+                    <label><input type="radio" name="question7" value=".js"> .js</label>
+                    <label><input type="radio" name="question7" value=".json"> .json</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">8 / 15</span>What does the console.log() function do in
+                    JavaScript?</p>
+                <div class="options">
+                    <label><input type="radio" name="question8" value="Displays an alert"> Displays an alert</label>
+                    <label><input type="radio" name="question8" value="Writes to the browser console"> Writes to the
+                        browser console</label>
+                    <label><input type="radio" name="question8" value="Modifies the DOM"> Modifies the DOM</label>
+                    <label><input type="radio" name="question8" value="Creates a pop-up window"> Creates a pop-up
+                        window</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">9 / 15</span>In which language do we write scripts to make
+                    a webpage interactive?</p>
+                <div class="options">
+                    <label><input type="radio" name="question9" value="CSS"> CSS</label>
+                    <label><input type="radio" name="question9" value="PHP"> PHP</label>
+                    <label><input type="radio" name="question9" value="JavaScript"> JavaScript</label>
+                    <label><input type="radio" name="question9" value="HTML"> HTML</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">10 / 15</span>What is a "framework"?</p>
+                <div class="options">
+                    <label><input type="radio" name="question10" value="A library of functions"> A library of
+                        functions</label>
+                    <label><input type="radio" name="question10"
+                            value="A set of tools and libraries to develop an application"> A set of tools and libraries
+                        to develop an application</label>
+                    <label><input type="radio" name="question10" value="A type of programming language"> A type of
+                        programming language</label>
+                    <label><input type="radio" name="question10" value="A markup language"> A markup language</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">11 / 15</span>What is the role of PHP in web development?
+                </p>
+                <div class="options">
+                    <label><input type="radio" name="question11" value="Style the page"> Style the page</label>
+                    <label><input type="radio" name="question11" value="Manage the database"> Manage the
+                        database</label>
+                    <label><input type="radio" name="question11" value="Create dynamic web pages"> Create dynamic web
+                        pages</label>
+                    <label><input type="radio" name="question11" value="Make the page responsive"> Make the page
+                        responsive</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">12 / 15</span>What is the role of the
+                    <code>&lt;head&gt;</code> tag in an HTML page?
+                </p>
+                <div class="options">
+                    <label><input type="radio" name="question12" value="Contains the main content of the page"> Contains
+                        the main content of the page</label>
+                    <label><input type="radio" name="question12"
+                            value="Contains metadata and links to external resources"> Contains metadata and links to
+                        external resources</label>
+                    <label><input type="radio" name="question12" value="Defines the footer"> Defines the footer</label>
+                    <label><input type="radio" name="question12" value="Displays images"> Displays images</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">13 / 15</span>Which technology is mainly used for
+                    cross-platform mobile development?</p>
+                <div class="options">
+                    <label><input type="radio" name="question13" value="Java"> Java</label>
+                    <label><input type="radio" name="question13" value="Flutter"> Flutter</label>
+                    <label><input type="radio" name="question13" value="C"> C</label>
+                    <label><input type="radio" name="question13" value="Swift"> Swift</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">14 / 15</span> What does "MySQL" stand for?</p>
+                <div class="options">
+                    <label><input type="radio" name="question14" value="Microsoft SQL"> Microsoft SQL</label>
+                    <label><input type="radio" name="question14" value="My Structured Query Language"> My Structured
+                        Query Language</label>
+                    <label><input type="radio" name="question14" value="Multi-Structured Query Language">
+                        Multi-Structured Query Language</label>
+                    <label><input type="radio" name="question14" value="MySQL Query Language"> MySQL Query
+                        Language</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <p class="question"><span class="progress-circle">15 / 15</span> In which language is Flutter code written?
+                </p>
+                <div class="options">
+                    <label><input type="radio" name="question15" value="Dart"> Dart</label>
+                    <label><input type="radio" name="question15" value="Java"> Java</label>
+                    <label><input type="radio" name="question15" value="Kotlin"> Kotlin</label>
+                    <label><input type="radio" name="question15" value="Swift"> Swift</label>
+                </div>
+            </div>
+
+        </div>
+        <button id="submit-quiz" class="submit-btn">Submit</button>
+        <div id="quiz-result"></div>
+    </section>
+
+    <hr id="hr1"/>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Rihem Naifar. All rights reserved.</p>
+            <p>Contact: <a href="mailto:rihem.naifar@gmail.com">rihem.naifar@gmail.com</a></p>
+
+            <!-- Liens des réseaux sociaux dans le footer -->
+            <div class="footer-social">
+                <a href="https://github.com/rihem0809" target="_blank"><i class="bx bxl-github"></i></a>
+                <a href="https://www.linkedin.com/in/naifar-rihem-9b9538296/?locale=fr_FR" target="_blank"><i
+                        class="bx bxl-linkedin"></i></a>
+                <a href="mailto:rihem.naifar@gmail.com"><i class="bx bxl-gmail"></i></a>
+                <a href="https://www.facebook.com/share/1CK6GcyjWF/?mibextid=wwXIfr" target="_blank"><i
+                        class="bx bxl-facebook-circle"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const answers = {
+            question1: "Cascading Style Sheets",
+            question2: "function",
+            question3: "A markup language",
+            question4: "img",
+            question5: "PHP: Hypertext Preprocessor",
+            question6: "Add interactivity",
+            question7: ".css",
+            question8: "Writes to the browser console",
+            question9: "JavaScript",
+            question10: "A set of tools and libraries to develop an application",
+            question11: "Create dynamic web pages",
+            question12: "Contains metadata and links to external resources",
+            question13: "Flutter",
+            question14: "MySQL Query Language",
+            question15: "Dart"
+        };
+
+        document.getElementById("submit-quiz").addEventListener("click", () => {
+            let score = 0;
+            const quizContainer = document.getElementById("quiz-container");
+            const resultContainer = document.getElementById("quiz-result");
+            const questions = quizContainer.querySelectorAll(".quiz-question");
+
+            // Réinitialiser les couleurs des options avant de les évaluer
+            questions.forEach((question) => {
+                const options = question.querySelectorAll('label');
+                options.forEach((option) => {
+                    option.classList.remove('correct', 'incorrect');
+                });
+            });
+
+            questions.forEach((question, index) => {
+                const questionId = `question${index + 1}`;
+                const selectedOption = question.querySelector(`input[name="${questionId}"]:checked`);
+                const correctAnswer = answers[questionId];
+
+                if (selectedOption) {
+                    // Vérifier si la réponse est correcte
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                        selectedOption.parentElement.classList.add("correct");
+                    } else {
+                        selectedOption.parentElement.classList.add("incorrect");
+                    }
+                }
+
+                // Marquer la bonne réponse, même si l'utilisateur ne l'a pas choisie
+                const correctOption = question.querySelector(`input[value="${correctAnswer}"]`);
+                correctOption.parentElement.classList.add("correct");
+            });
+
+            // Désactiver tous les boutons radio après soumission
+            questions.forEach((question) => {
+                const options = question.querySelectorAll(`input[type="radio"]`);
+                options.forEach((option) => {
+                    option.disabled = true;
+                });
+            });
+
+            // Afficher le résultat du score
+            resultContainer.innerHTML = `Your score: ${score} / ${questions.length}`;
+        });
+
+
+
+        const moonIcon = document.getElementById('moon');
+        const root = document.documentElement;
+
+        // Fonction pour appliquer le mode clair
+        const setLightMode = () => {
+            root.style.setProperty('--primary-color', '#f5f5f5');
+            root.style.setProperty('--secondary-color', '#212121');
+            moonIcon.classList.remove('bx-moon');
+            moonIcon.classList.add('bxs-moon');
+            localStorage.setItem('theme', 'light'); // Sauvegarde l'état du mode clair
+        };
+
+        // Fonction pour appliquer le mode sombre
+        const setDarkMode = () => {
+            root.style.setProperty('--primary-color', '#212121');
+            root.style.setProperty('--secondary-color', '#f5f5f5');
+            moonIcon.classList.remove('bxs-moon'); // Icône "pleine"
+            moonIcon.classList.add('bx-moon'); // Icône "vide"
+            localStorage.setItem('theme', 'dark'); // Sauvegarde l'état du mode sombre
+        };
+
+        // Vérifie l'état du mode dans le localStorage lors du chargement de la page
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            setDarkMode();
+        } else {
+            setLightMode();
+        }
+
+        // Écoute l'événement de clic sur l'icône pour changer le mode
+        moonIcon.addEventListener('click', () => {
+            const currentPrimaryColor = getComputedStyle(root).getPropertyValue('--primary-color').trim();
+            if (currentPrimaryColor === '#f5f5f5') {
+                setDarkMode();
+            } else {
+                setLightMode();
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

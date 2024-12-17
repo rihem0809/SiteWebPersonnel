@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadonnées -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+
+    <!-- Liens vers les feuilles de style -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../feuilles_css/navbar.css">
+    <link rel="stylesheet" href="../../feuilles_css/academic_background/bachelors.css">
+
+</head>
+
+<body>
+    <!-- Section Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="title">Rihem <span id="span-title">Naifar</span></a>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <!-- Menu déroulant pour "Education" -->
+            <li class="dropdown">
+                <a href="#" class="active">Education</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../education.html">Academic Background</a></li>
+                    <li><a href="skills.html">IT Skills</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Projects</a></li>
+            <!-- Menu déroulant pour "Extras" -->
+            <li class="dropdown">
+                <a href="#">Extras</a>
+                <ul class="dropdown-menu">
+                    <li><a href="events.html">Scientific Events</a></li>
+                    <li><a href="hobbies.html">Hobbies and Personality</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </li>
+            <li><a href="../contact.html">Contact</a></li>
+            <!-- Icône pour le mode sombre -->
+            <i id="moon" class="bx bxs-moon"></i>
+        </ul>
+    </nav>
+
+    <!-- Section Bachelor's in Computer Science -->
+    <section class="education-details">
+        <h1>Bachelor's in Computer Science</h1>
+        <p><strong>Institution:</strong> Higher Institute of Computer Science and Multimedia of Sfax</p>
+        <p><strong>Years:</strong> 2021 - 2024</p>
+        <p><strong>Status:</strong> Graduated</p>
+        <img src="../../multimedia/bachelor-diploma.jpg" alt="Diploma Image" class="diploma-image" />
+
+        <h2>Courses Taken</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Year</th>
+                    <th>Academic Year</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Common Core</td>
+                    <td>1st Year</td>
+                    <td>2021-2022</td>
+                    <td>This course introduces the fundamentals of programming using Python, HTML, C, algorithms, and
+                        databases.</td>
+                </tr>
+                <tr>
+                    <td>Big Data and Data Analysis</td>
+                    <td>2nd Year</td>
+                    <td>2022-2023</td>
+                    <td>This course covers Java programming, database management, XML, PHP, Agile methodologies, and
+                        mobile development.</td>
+                </tr>
+
+                <tr>
+                    <td>Big Data and Data Analysis</td>
+                    <td>2nd Year</td>
+                    <td>2023-2024</td>
+                    <td>This course covers PHP, NoSQL, security, ISTQB, and Power BI.</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+        <h2>Skills Acquired</h2>
+        <div class="skills">
+            <ul>
+                <li>Proficient in programming languages: Python, Java, C, PHP, JavaScript</li>
+                <li>Experience with data analysis and big data technologies such as NoSQL and Power BI</li>
+                <li>Strong understanding of databases, including relational databases and NoSQL systems</li>
+                <li>Familiar with Agile methodologies for software development</li>
+                <li>Knowledge of security principles and ISTQB for quality assurance</li>
+                <li>Experience with mobile development and web technologies (HTML, CSS)</li>
+            </ul>
+        </div>
+
+
+    </section>
+
+    <!-- Script pour basculer en mode sombre -->
+    <script>
+        const moonIcon = document.getElementById('moon');
+        const root = document.documentElement;
+
+
+        const setLightMode = () => {
+            root.style.setProperty('--primary-color', '#f5f5f5');
+            root.style.setProperty('--secondary-color', '#212121');
+            moonIcon.classList.remove('bx-moon');
+            moonIcon.classList.add('bxs-moon');
+        };
+
+        const setDarkMode = () => {
+            root.style.setProperty('--primary-color', '#212121');
+            root.style.setProperty('--secondary-color', '#f5f5f5');
+            moonIcon.classList.remove('bxs-moon'); // Icône "pleine"
+            moonIcon.classList.add('bx-moon'); // Icône "vide"
+        };
+
+        moonIcon.addEventListener('click', () => {
+            const currentPrimaryColor = getComputedStyle(root).getPropertyValue('--primary-color').trim();
+            if (currentPrimaryColor === '#f5f5f5') {
+                setDarkMode();
+            } else {
+                setLightMode();
+            }
+        });
+
+        setLightMode();
+    </script>
+</body>
+
+</html>
